@@ -29,10 +29,9 @@ public class Log extends javax.swing.JFrame {
 
     public Log() {
         initComponents();
-        
+
         ImagePanel panel = new ImagePanel(new ImageIcon(this.getClass().getResource("../Images/fond d'écran.jpeg")).getImage());
-        
-        
+
         this.getContentPane().add(panel);
         this.pack();
         this.setVisible(true);
