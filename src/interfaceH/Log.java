@@ -10,6 +10,7 @@ import projet_sih.*;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -28,6 +29,13 @@ public class Log extends javax.swing.JFrame {
 
     public Log() {
         initComponents();
+        
+        ImagePanel panel = new ImagePanel(new ImageIcon(this.getClass().getResource("../Images/fond d'écran.jpeg")).getImage());
+        
+        
+        this.getContentPane().add(panel);
+        this.pack();
+        this.setVisible(true);
     }
 
     /**
@@ -48,6 +56,8 @@ public class Log extends javax.swing.JFrame {
         motdepasse = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setOpaque(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
